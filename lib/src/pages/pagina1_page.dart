@@ -17,23 +17,25 @@ class Pagina1Page extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Navigate.push.flip(context, paginaAnterior: Pagina1Page(), paginaSiguiente: Pagina2Page(), );
-          // Navigate.pushReplacement.flip(context, paginaAnterior: Pagina1Page(), paginaSiguiente: Pagina2Page(), );
+          // Navigate.push.cupertino(context, pagina: const Pagina2Page());
           Navigate.push.defaults(context, pagina: const Pagina2Page());
-          // Navigate.pushReplacement.defaults(context, pagina: Pagina2Page());
-          // Navigate.push.material(context, pagina: Pagina2Page());
-          // Navigate.push.cupertino(context, pagina: Pagina2Page());
-          // Navigate.pushReplacement.slide(context, pagina: Pagina2Page());
-          // Navigate.pushReplacement.fade(context, pagina: Pagina2Page());
-          // Navigate.pushReplacement.rotation(context, pagina: Pagina2Page());
-          // Navigate.pushReplacement.scale(context, pagina: Pagina2Page());
-          // Navigate.push.custom(context, pagina: Pagina2Page(), transitionsBuilder: (x, animation, animation2, child) {
-          //   final parent = CurvedAnimation(parent: animation, curve: Curves.easeInOut);
+          // Navigate.push.fade(context, pagina: const Pagina2Page());
+          // Navigate.push.material(context, pagina: const Pagina2Page());
+          // Navigate.push.rotation(context, pagina: const Pagina2Page());
+          // Navigate.push.scale(context, pagina: const Pagina2Page());
+          // Navigate.push.slide(context, pagina: const Pagina2Page());
+
+          // Navigate.push.custom(context, pagina: const Pagina2Page(),
+          //     transitionsBuilder: (x, animation, animation2, child) {
+          //   final parent =
+          //       CurvedAnimation(parent: animation, curve: Curves.easeInOut);
           //   return FadeTransition(
-          //     child: child,
           //     opacity: Tween<double>(begin: 0, end: 1).animate(parent),
+          //     child: child,
           //   );
           // });
+
+          // Navigate.pushReplacement.scale(context, pagina: Pagina2Page());
 
           // Lo que se uso en el curso
           // Navigator.push(context, MaterialPageRoute(builder: (x) => Pagina2Page()));
