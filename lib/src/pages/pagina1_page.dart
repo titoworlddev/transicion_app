@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../helpers/navigation_helpers.dart';
 import 'pagina2_page.dart';
 
 class Pagina1Page extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Pagina 1'),
@@ -45,20 +42,19 @@ class Pagina1Page extends StatelessWidget {
     );
   }
 
-
-
   // Todo el metodo siguiente es el metodo que implemento Fernando Herrera en el curso,
   // lo dejo porque es interesante siempre ver como lo hizo pero la clase que he creado en los helpers
   // mejora esto y ademas tiene las mismas transiciones que hay aqui, pero solo hay que llamarla y poner la pagina.
   // Aunque no es exactamente el que el hizo porque yo le he añadido la opcion de escoger cupertino y material.
   Route crearRuta({required Widget pagina}) {
-
     return PageRouteBuilder(
-      pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) 
-        => pagina,
+      pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) =>
+          pagina,
       // transitionDuration: Duration(seconds: 2),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        final parent = CurvedAnimation(parent: animation, curve: Curves.easeInOut);
+        final parent =
+            CurvedAnimation(parent: animation, curve: Curves.easeInOut);
 
         // return SlideTransition(
         //   child: child,
@@ -76,9 +72,8 @@ class Pagina1Page extends StatelessWidget {
         // );
 
         return FadeTransition(
-          child: child,
-          opacity: Tween<double>(begin: 0.0, end: 1.0).animate(parent)
-        );
+            child: child,
+            opacity: Tween<double>(begin: 0.0, end: 1.0).animate(parent));
 
         // return RotationTransition(
         //   child: FadeTransition(
@@ -87,10 +82,7 @@ class Pagina1Page extends StatelessWidget {
         //   ),
         //   turns: Tween<double>(begin: 0.5, end: 1.0).animate(parent),
         // );
-
       },
     );
-
   }
 }
-
