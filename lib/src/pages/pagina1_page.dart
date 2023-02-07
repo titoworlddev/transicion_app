@@ -4,20 +4,22 @@ import '../helpers/navigation_helpers.dart';
 import 'pagina2_page.dart';
 
 class Pagina1Page extends StatelessWidget {
+  const Pagina1Page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pagina 1'),
+        title: const Text('Pagina 1'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Pagina 1'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Navigate.push.flip(context, paginaAnterior: Pagina1Page(), paginaSiguiente: Pagina2Page(), );
           // Navigate.pushReplacement.flip(context, paginaAnterior: Pagina1Page(), paginaSiguiente: Pagina2Page(), );
-          Navigate.push.defaults(context, pagina: Pagina2Page());
+          Navigate.push.defaults(context, pagina: const Pagina2Page());
           // Navigate.pushReplacement.defaults(context, pagina: Pagina2Page());
           // Navigate.push.material(context, pagina: Pagina2Page());
           // Navigate.push.cupertino(context, pagina: Pagina2Page());
@@ -37,7 +39,7 @@ class Pagina1Page extends StatelessWidget {
           // Navigator.push(context, MaterialPageRoute(builder: (x) => Pagina2Page()));
           // Navigator.push(context, crearRuta(pagina: Pagina2Page()));
         },
-        child: Icon(Icons.keyboard_arrow_right),
+        child: const Icon(Icons.keyboard_arrow_right),
       ),
     );
   }
@@ -72,8 +74,9 @@ class Pagina1Page extends StatelessWidget {
         // );
 
         return FadeTransition(
-            child: child,
-            opacity: Tween<double>(begin: 0.0, end: 1.0).animate(parent));
+          opacity: Tween<double>(begin: 0.0, end: 1.0).animate(parent),
+          child: child,
+        );
 
         // return RotationTransition(
         //   child: FadeTransition(
