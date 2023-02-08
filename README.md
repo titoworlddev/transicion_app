@@ -1,16 +1,16 @@
-# transicion_app
+# Transitions app
 
-A new Flutter project.
+This application is a tool that allows you to visualize and experiment with the different screen transitions that can be done in flutter.
 
-## Getting Started
+The application has custom classes created specifically to facilitate the use of these transitions, making it very easy to use. Also, transitions can be adjusted to the user's tastes or can be set in the app theme for a more personalized experience.
 
-This project is a starting point for a Flutter application.
+The application is well prepared and documented, making it suitable for future use as a package on pub.dev.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px">
+  <img width="150" src="screenshot1.png" alt="Screenshot 1">
+  <img width="150" src="screenshot2.png" alt="Screenshot 2">
+  <img width="150" src="screenshot3.png" alt="Screenshot 3">
+  <img width="150" src="screenshot4.png" alt="Screenshot 4">
+  <img width="150" src="screenshot5.png" alt="Screenshot 5">
+  <img width="150" src="screenshot6.png" alt="Screenshot 6">
+</div>
