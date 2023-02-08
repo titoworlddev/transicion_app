@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:transicion_app/src/pages/page2_page.dart';
 import 'package:transicion_app/src/widgets/transition_button.dart';
 
 import '../helpers/navigation_helpers.dart';
-import 'pagina2_page.dart';
 
-class Pagina1Page extends StatelessWidget {
-  const Pagina1Page({super.key});
+class Page1Page extends StatelessWidget {
+  const Page1Page({super.key});
 
   @override
   Widget build(BuildContext context) {
     Map<String, Function> navigations = {
       'Cupertino': () =>
-          Navigate.push.cupertino(context, pagina: const Pagina2Page()),
+          Navigate.push.cupertino(context, pagina: const Page2Page()),
       'System': () =>
-          Navigate.push.defaults(context, pagina: const Pagina2Page()),
-      'Fade': () => Navigate.push.fade(context, pagina: const Pagina2Page()),
+          Navigate.push.defaults(context, pagina: const Page2Page()),
+      'Fade': () => Navigate.push.fade(context, pagina: const Page2Page()),
       'Material': () =>
-          Navigate.push.material(context, pagina: const Pagina2Page()),
+          Navigate.push.material(context, pagina: const Page2Page()),
       'Rotation': () =>
-          Navigate.push.rotation(context, pagina: const Pagina2Page()),
-      'Scale': () => Navigate.push.scale(context, pagina: const Pagina2Page()),
-      'Slide': () => Navigate.push.slide(context, pagina: const Pagina2Page()),
+          Navigate.push.rotation(context, pagina: const Page2Page()),
+      'Scale': () => Navigate.push.scale(context, pagina: const Page2Page()),
+      'Slide': () => Navigate.push.slide(context, pagina: const Page2Page()),
       'Custom': () => Navigate.push.custom(
             context,
-            pagina: const Pagina2Page(),
+            pagina: const Page2Page(),
             transitionsBuilder: (x, animation, animation2, child) {
               final parent =
                   CurvedAnimation(parent: animation, curve: Curves.easeInOut);
@@ -37,22 +37,22 @@ class Pagina1Page extends StatelessWidget {
 
     Map<String, Function> navigationsWithReplacement = {
       'Cupertino': () => Navigate.pushReplacement
-          .cupertino(context, pagina: const Pagina2Page()),
-      'System': () => Navigate.pushReplacement
-          .defaults(context, pagina: const Pagina2Page()),
+          .cupertino(context, pagina: const Page2Page()),
+      'System': () =>
+          Navigate.pushReplacement.defaults(context, pagina: const Page2Page()),
       'Fade': () =>
-          Navigate.pushReplacement.fade(context, pagina: const Pagina2Page()),
-      'Material': () => Navigate.pushReplacement
-          .material(context, pagina: const Pagina2Page()),
-      'Rotation': () => Navigate.pushReplacement
-          .rotation(context, pagina: const Pagina2Page()),
+          Navigate.pushReplacement.fade(context, pagina: const Page2Page()),
+      'Material': () =>
+          Navigate.pushReplacement.material(context, pagina: const Page2Page()),
+      'Rotation': () =>
+          Navigate.pushReplacement.rotation(context, pagina: const Page2Page()),
       'Scale': () =>
-          Navigate.pushReplacement.scale(context, pagina: const Pagina2Page()),
+          Navigate.pushReplacement.scale(context, pagina: const Page2Page()),
       'Slide': () =>
-          Navigate.pushReplacement.slide(context, pagina: const Pagina2Page()),
+          Navigate.pushReplacement.slide(context, pagina: const Page2Page()),
       'Custom': () => Navigate.pushReplacement.custom(
             context,
-            pagina: const Pagina2Page(),
+            pagina: const Page2Page(),
             transitionsBuilder: (x, animation, animation2, child) {
               final parent =
                   CurvedAnimation(parent: animation, curve: Curves.easeInOut);
