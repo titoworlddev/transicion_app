@@ -12,5 +12,4 @@ The application is well prepared and documented, making it suitable for future u
   <img width="150" src="screenshot3.png" alt="Screenshot 3">
   <img width="150" src="screenshot4.png" alt="Screenshot 4">
   <img width="150" src="screenshot5.png" alt="Screenshot 5">
-  <img width="150" src="screenshot6.png" alt="Screenshot 6">
 </div>
